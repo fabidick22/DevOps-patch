@@ -37,11 +37,24 @@
 			// - https://github.com/hakimel/reveal.js#configuration
 			// - https://github.com/hakimel/reveal.js#dependencies
 			Reveal.initialize({
+				parallaxBackgroundImage: './images/comand-line.jpg',
+                parallaxBackgroundSize: '2200px 1100px',
+                parallaxBackgroundHorizontal: 70,
+                parallaxBackgroundVertical: 50,
+				allottedTime: 30 * 60 * 1000, // 30 minutes
+				// - (optional) height of page/time progress bar
+				progressBarHeight: 6,
+				// - (optional) bar color
+				barColor: 'rgb(255,0,43)',
+				// - (optional) bar color when timer is paused
+				pausedBarColor: 'rgba(200,0,0,.6)',
+
 				dependencies: [
 					{ src: 'plugin/markdown/marked.js' },
 					{ src: 'plugin/markdown/markdown.js' },
 					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true }
+					{ src: 'plugin/highlight/highlight.js', async: true },
+					{ src: 'plugin/elapsed-time-bar/elapsed-time-bar.js'}
 				]
 			});
 		</script>
