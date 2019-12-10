@@ -21,12 +21,53 @@
 			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
+		<style>
+		.container{
+			display: flex;
+		}
+		.col{
+			flex: 1;
+		}
+		</style>
 	</head>
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Sec</section>
-				<section>DevOps</section>
+				<section>
+					<h2>El parche de <code style="color: #ff3462">DevOps</code></h2>
+					<div class="col">
+						<div id="typed-strings">
+							<h3><code style="color: #ff3462">echo</code> "<a href="http://github.com/fabidick22">Dickson Armijos R.</a>"</h3>
+							<h3><code style="color: #ff3462">echo</code> "<a href="">Member of Technical Staff ioet, Inc.</a>"</h3>
+						</div>
+						<span id="typed"></span>
+						<a href=""> <strong style="color: white"> IOET</strong></a>
+					</div>
+					<div class="container">
+						<img src="images/ioet-logo-100mm.png" style="background:none; border:none; box-shadow:none;" alt="ioet" width="50" height="50">
+					</div>
+					<aside class="notes">
+						Oh hey, these are some notes.
+					</aside>
+				</section>
+				<section>
+					<h2>Historia</h2>
+				</section>
+				<section>
+					<h2>DevOps</h2>
+				</section>
+				<section>
+					<h2>InfoSec</h2>
+				</section>
+				<section>
+					<h2>Sec in DevOps</h2>
+				</section>
+				<section>
+					<h2>Demo</h2>
+				</section>
+				<section>
+					<h2>Referencias</h2>
+				</section>
 			</div>
 		</div>
 
@@ -54,7 +95,8 @@
 					{ src: 'plugin/markdown/markdown.js' },
 					{ src: 'plugin/notes/notes.js', async: true },
 					{ src: 'plugin/highlight/highlight.js', async: true },
-					{ src: 'plugin/elapsed-time-bar/elapsed-time-bar.js'}
+					{ src: 'plugin/elapsed-time-bar/elapsed-time-bar.js'},
+					{ src: 'plugin/typed/typed.js', async: false , callback: function() { callTypedJs(); }},
 				]
 			});
 		</script>
